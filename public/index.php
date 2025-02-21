@@ -5,6 +5,10 @@ use Common\Middlewares\CSRFMiddleware;
 use Common\Requests\Router;
 use Dotenv\Dotenv;
 
+session_set_cookie_params([
+    'secure' => true,
+    'samesite' => 'None'
+]);
 session_start();
 
 require_once __DIR__.'/../vendor/autoload.php';
@@ -17,7 +21,7 @@ $dotenv = Dotenv::createUnsafeImmutable(__DIR__ . '/../');
 $dotenv->load();
 
 CSRFMiddleware::init();
-CSRFMiddleware::csrfProtect();
+//CSRFMiddleware::csrfProtect();
 
 $router = new Router();
 $router->runRoute($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
