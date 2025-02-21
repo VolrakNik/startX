@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+</head>
+<body>
+    <div>Твой баланс: {balance}</div>
+    <form action="account/send" method="post">
+        <input type="number" name="amount" value="10">
+        <input type="number" name="accountId" value="2">
+        <input type="hidden" name="csrfToken" value="{csrfToken}">
+        <button type="submit">Перевести</button>
+    </form>
+</body>
+</html>

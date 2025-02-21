@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+</head>
+<body>
+    <form action="/register" method="post">
+        <input type="text" name="email" placeholder="Почта">
+        <input type="password" name="password" placeholder="Пароль">
+        <input type="hidden" name="csrfToken" value="{csrfToken}">
+        <button type="submit">Регистрация</button>
+    </form>
+    <a href="/login">Войти</a>
+</body>
+</html>
