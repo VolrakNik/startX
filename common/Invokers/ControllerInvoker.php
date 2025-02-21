@@ -6,7 +6,6 @@ use Common\Requests\Request;
 use Common\Requests\RequestValidator;
 use ReflectionException;
 use ReflectionMethod;
-use App\Requests\BankAccountSendRequest;
 
 class ControllerInvoker
 {

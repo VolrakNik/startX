@@ -27,6 +27,8 @@ setcookie(session_name(), '', time() - 3600, '/');
 Затем следует зайти в консоль php-контейнера:
 `docker exec -it bank_php sh`
 
+Выполни `composer install`
+
 И выполнить миграцию: `php app/migrations/migrate.php`
 
 Данные для работы с БД можно найти в .env

@@ -5,7 +5,7 @@ namespace Common\Exceptions;
 use RuntimeException;
 use Throwable;
 
-class HttpException extends RuntimeException
+class HttpException extends Exception
 {
     public function __construct(
         private readonly int $statusCode,
